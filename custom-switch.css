@@ -2,7 +2,20 @@
 .switch, .switch .slider { background:url(slider.png) no-repeat; }
 .switch { background-position:0 -28px; cursor:pointer; display:inline-block; height:22px; padding:0; position:relative; width:62px; }
 .switch label { color:#fff; display:inline-block; font-size:14px; height:22px; line-height:22px; margin:0; padding:0; text-align:center; text-transform:uppercase; width:28px; }
-.switch .slider { height:22px; position:absolute; right:0; top:0; width:32px; @include transition; @include transition-property(right); }
+.switch .slider { height:22px; position:absolute; right:0; top:0; width:32px;
+     -o-transition-duration:.25s;
+   -moz-transition-duration:.25s;
+-webkit-transition-duration:.25s;
+        transition-duration:.25s;
+     -o-transition-timing-function:ease-in;
+   -moz-transition-timing-function:ease-in;
+-webkit-transition-timing-function:ease-in;
+        transition-timing-function:ease-in;
+     -o-transition-property:right;
+   -moz-transition-property:right;
+-webkit-transition-property:right;
+        transition-property:right;
+}
 .switch.on .slider { right:30px; }
 .switch input { display:none; }
 
